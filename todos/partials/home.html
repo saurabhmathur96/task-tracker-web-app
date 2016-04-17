@@ -1,0 +1,14 @@
+<div class="jumbotron" ng-if="!user.isLoggedIn">
+  <h1>Hello !</h1>
+  <p>Todos is a minimalist task-tracking application</p>
+  <p><a class="btn btn-primary btn-lg" href="#/register" role="button">Register now !</a></p>
+</div>
+
+<div class="col-xs-8 col-xs-offset-2" ng-if="user.isLoggedIn">
+  <h1>Welcome, {{user.name}}</h1>
+  <div class="list-group">
+    <a ng-href="#/task/{{item._id}}" class="list-group-item" ng-repeat="item in items">
+      {{item.title}} <i class="glyphicon glyphicon-menu-right pull-right"></i>
+    </a>
+  </div>
+</div>
