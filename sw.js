@@ -1,20 +1,20 @@
 var CACHE_NAME = 'todos-app-v2';
 var urlsToCache = [
-  '/css/app.css',
-  '/js/app.js',
-  '/js/controllers/create.js',
-  '/js/controllers/detail.js',
-  '/js/controllers/error.js',
-  '/js/controllers/home.js',
-  '/js/controllers/login.js',
-  '/js/controllers/module.js',
-  '/js/controllers/register.js',
-  '/partials/create.html',
-  '/partials/detail.html',
-  '/partials/Error404.html',
-  '/partials/home.html',
-  '/partials/login.html',
-  '/partials/register.html'
+  'css/app.css',
+  'js/app.js',
+  'js/controllers/create.js',
+  'js/controllers/detail.js',
+  'js/controllers/error.js',
+  'js/controllers/home.js',
+  'js/controllers/login.js',
+  'js/controllers/module.js',
+  'js/controllers/register.js',
+  'partials/create.html',
+  'partials/detail.html',
+  'partials/Error404.html',
+  'partials/home.html',
+  'partials/login.html',
+  'partials/register.html'
 ];
 
 self.addEventListener('install', function(event) {
