@@ -1,0 +1,16 @@
+<div class="col-xs-8 col-xs-offset-2">
+  <h1>{{task.title}} </h1>
+  
+  <div class="row">
+    <span class="label label-success" ng-if="task.done"><i class="glyphicon glyphicon-ok"></i> Completed</span>
+    <pre>{{task.description}}</pre>
+    
+    <div class="btn-group">
+      <a class="btn btn-primary btn-sm" href="#/" role="button"><i class="glyphicon glyphicon-menu-left"></i> Go Back</a>
+      <button class="btn btn-success btn-sm" ng-click="complete()" ng-if="!task.done"><i class="glyphicon glyphicon-ok"></i> Complete</button>
+      <button class="btn btn-danger btn-sm" ng-click="delete()"><i class="glyphicon glyphicon-trash"></i> Delete</button>
+    </div>
+  </div>
+
+
+</div>
