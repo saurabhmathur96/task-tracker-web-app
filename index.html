@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Todos</title>
+  <title> Todos </title>
 
   <!-- Vendor CSS -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -46,19 +46,21 @@
 
   <script src="js/controllers/login.js"></script>
   <script src="js/controllers/register.js"></script>
-
+  
+  <script src="sw-v1.js"></script>
+  
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw-v1.js').then(function(registration) {
-    // Registration was successful
-    console.log('ServiceWorker registration successful with scope: ',    registration.scope);
-  }).catch(function(err) {
+        navigator.serviceWorker.register('sw-v1.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+      }).catch(function(err) {
         // registration failed :(
-    console.log('ServiceWorker registration failed: ', err);
-  });
+        console.log('ServiceWorker registration failed: ', err);
+      });
     }
   </script>
-  <script src="sw-v1.js"></script>
+  
 
 </body>
 
