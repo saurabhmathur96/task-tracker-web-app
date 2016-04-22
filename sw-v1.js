@@ -32,6 +32,7 @@ self.addEventListener('activate', function(event) {
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
+      console.log(cacheNames)
       return Promise.all(
         cacheNames.map(function(cacheName) {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
