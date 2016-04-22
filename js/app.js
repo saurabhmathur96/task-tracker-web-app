@@ -62,7 +62,8 @@ app.run(function ($rootScope, $cookies, $location, $timeout) {
   if (user == null) {
     $rootScope.user = {
       isLoggedIn: false,
-      token: null
+      token: null,
+      tasks: {}
     }
     $location.path('/login')
   } else {
@@ -72,10 +73,10 @@ app.run(function ($rootScope, $cookies, $location, $timeout) {
   $rootScope.logout = function() {
     $rootScope.user = {
       isLoggedIn: false,
-      token: null
+      token: null,
+      tasks: {}
     }
     $cookies.remove('user')
-    $cookies.remove('tasks')
     $location.path('/login')
   }
 

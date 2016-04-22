@@ -11,6 +11,11 @@ angular.module('MainApp.controllers').controller('CreateCtrl', function($scope, 
 
       $http.post($rootScope.baseURI + '/task', JSON.stringify($scope.task), config)
         .then(function(response) {
+            
+            var task = response['data']['task']
+            $scope.task = task
+            $rootScope.user.tasks[task._id] = task
+            
             $rootScope.addAlert('success', 'task created')
             $location.path('/')
           },
