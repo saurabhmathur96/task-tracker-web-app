@@ -2,6 +2,9 @@ body {
   margin-top: 60px; /* for navbar */
 }
 
-pre {
-  text-align: left;
+
+
+a.unstyled-link, a.unstyled-link:hover, a.unstyled-link:link {
+  color: inherit;
+  text-decoration: inherit;
 }

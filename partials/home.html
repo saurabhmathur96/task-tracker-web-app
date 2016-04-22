@@ -1,14 +1,26 @@
-<div class="jumbotron" ng-if="!user.isLoggedIn">
-  <h1>Hello !</h1>
-  <p>Todos is a minimalist task-tracking application</p>
-  <p><a class="btn btn-primary btn-lg" href="#/register" role="button">Register now !</a></p>
+<div class="col-sm-8 col-sm-offset-2" ng-if="!user.isLoggedIn">
+  <h1>Welcome</h1>
+  <p><code>// TODO</code> is a task-tracking application that helps you to </p>
+    <img class="img-responsive" src="images/remember-all-the-things.jpg" alt="remember all the things !" />
+    <br>
+
+    <a class="btn btn-primary" href="#/register" role="button">Register Here</a>
+
 </div>
 
-<div class="col-xs-8 col-xs-offset-2" ng-if="user.isLoggedIn">
-  <h1>Welcome, {{user.name}}</h1>
+<div class="col-sm-8 col-sm-offset-2" ng-if="user.isLoggedIn">
+  <h1>Welcome, {{user.name}} 
+    <button ng-click="refresh()" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-refresh"></i>
+    Refresh
+    </button>
+  </h1>
+  <p ng-if="isEmpty(items)"> 
+      You don't seem to have any tasks. Create one <a href="#/create"> Here </a>.
+  </p>
   <div class="list-group">
     <a ng-href="#/task/{{item._id}}" class="list-group-item" ng-repeat="item in items">
       {{item.title}} <i class="glyphicon glyphicon-menu-right pull-right"></i>
     </a>
   </div>
+  
 </div>

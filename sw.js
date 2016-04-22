@@ -1,9 +1,18 @@
-var CACHE_NAME = 'todos-app-v3';
+/*var CACHE_NAME = 'todo-app-v1';
 var urlsToCache = [
-  'css/*',
-  'js/*',
-  'js/controllers/*',
-  'partials/*',
+  'css/app.css',
+  'js/app.js',
+  'js/controllers/module.js',
+  'js/controllers/home.js',
+  'js/controllers/login.js',
+  'js/controllers/register.js',
+  'js/controllers/create.js',
+  'js/controllers/detail.js',
+  'partials/home.html',
+  'partials/login.html',
+  'partials/register.html',
+  'partials/create.html',
+  'partials/detail.html'
 ];
 
 self.addEventListener('install', function(event) {
@@ -48,4 +57,4 @@ self.addEventListener('fetch', function(event) {
         );
       })
     );
-});
+});*/

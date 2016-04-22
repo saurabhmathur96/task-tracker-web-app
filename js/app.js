@@ -3,6 +3,8 @@ var app = angular.module('MainApp', [
   'ui.bootstrap',
   'ngCookies',
   'angular-jwt',
+  'ngSanitize',
+  'btford.markdown',
   'MainApp.controllers'
 ])
 
@@ -31,10 +33,8 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'partials/create.html',
       controller: 'CreateCtrl'
     })
-    // else 404
-    .otherwise('/404', {
-      templateUrl: 'partials/Error404.html',
-      controller: 'ErrorCtrl'
+    .otherwise({
+      redirectTo: '/'
     });
 }]);
 
