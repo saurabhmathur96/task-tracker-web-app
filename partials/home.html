@@ -10,8 +10,8 @@
 
 <div class="col-sm-8 col-sm-offset-2" ng-if="user.isLoggedIn">
   <h1>Welcome, {{user.name}} 
-    <button ng-click="refresh()" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-refresh"></i>
-    Refresh
+    <button ng-click="refresh()" class="btn btn-primary"><i class="glyphicon glyphicon-refresh"></i>
+    <span class="hidden-xs">Refresh</span>
     </button>
   </h1>
   <p ng-if="isEmpty(items)"> 
