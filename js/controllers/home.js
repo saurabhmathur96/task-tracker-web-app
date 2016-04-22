@@ -11,7 +11,7 @@ angular.module('MainApp.controllers').controller('HomeCtrl', function ($scope, $
     var name = jwtHelper.decodeToken($rootScope.user.token)['name']
     $rootScope.user.name = name
     $scope.items = $rootScope.user.tasks
-    console.log(JSON.stringify($scope.items, null, 2))
+    
     
     $http.get($rootScope.baseURI +'/task', config)
          .then(function (response) {

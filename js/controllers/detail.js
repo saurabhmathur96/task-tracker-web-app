@@ -12,13 +12,13 @@ angular.module('MainApp.controllers').controller('DetailCtrl', function ($scope,
   var taskId = $route.current.params['id']
   
   $scope.task = $rootScope.user.tasks[taskId]
-  console.log($scope.task)
+
   
   
   
   $http.get($rootScope.baseURI + '/task/' + taskId, config)
     .then(function (response) {
-      console.log(response);
+
       var task = response['data']['task']
       $scope.task = task
       $rootScope.user.tasks[taskId] = task
@@ -32,7 +32,7 @@ angular.module('MainApp.controllers').controller('DetailCtrl', function ($scope,
     $http.put($rootScope.baseURI + '/task/' + taskId, 
     JSON.stringify({ 'done': true }), config)
       .then(function (response) {
-        console.log(JSON.stringify(response, null, 2));
+        
         var task = response['data']['task']
         $scope.task = task
         $rootScope.user.tasks[taskId] = task
@@ -50,7 +50,7 @@ angular.module('MainApp.controllers').controller('DetailCtrl', function ($scope,
         $location.path('/')
       },
       function (response) {
-        console.log(response)
+
         $rootScope.addAlert('warning', 'please check your internet connection')
       })
   }
