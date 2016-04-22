@@ -1,4 +1,4 @@
-/*var CACHE_NAME = 'todo-app-v1';
+var CACHE_NAME = 'todo-app-v1';
 var urlsToCache = [
   'css/app.css',
   'js/app.js',
@@ -57,4 +57,4 @@ self.addEventListener('fetch', function(event) {
         );
       })
     );
-});*/
+});
