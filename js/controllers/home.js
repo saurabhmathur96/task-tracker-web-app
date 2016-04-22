@@ -13,16 +13,15 @@ angular.module('MainApp.controllers').controller('HomeCtrl', function ($scope, $
     $scope.items = $rootScope.user.tasks
     console.log(JSON.stringify($scope.items, null, 2))
     
-    /*$scope.tasks = $rootScope.user.tasks.map(function(value, index) {
-      return value
-    })*/
-
     $http.get($rootScope.baseURI +'/task', config)
          .then(function (response) {
            
            var tasks = response['data']['tasks']
            for(var i=0; i<tasks.length; i++) {
-             $rootScope.user.tasks[tasks[i]['_id']] = tasks[i]
+             if (!$rootScope.user.tasks.hasOwnProperty(tasks[i]['_id'])) {
+               $rootScope.user.tasks[tasks[i]['_id']] = tasks[i]
+             }
+             
            }
            
            
